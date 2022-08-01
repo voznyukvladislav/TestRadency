@@ -64,5 +64,16 @@ namespace TestRadency.Classes
             }
             Console.WriteLine();
         }
+        public static string ToString(List<Element> list)
+        {
+            string str = "";
+            for(int i = 0; i < list.Count; i++)
+            {
+                str += list[i].Value;
+                str += " ";
+            }
+
+            return str;
+        }
     } 
 }

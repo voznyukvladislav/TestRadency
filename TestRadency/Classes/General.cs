@@ -27,18 +27,12 @@ namespace TestRadency.Classes
         }
         public static List<int> DivideNum(string value)
         {
-            int num = Convert.ToInt32(value);
             List<int> digits = new List<int>();
 
-            int numSize = GetNumSize(num);
-            int divisor = 10;
-
-            int newDigit = 0;
+            int numSize = value.Length;
             for(int i = 0; i < numSize; i++)
             {
-                newDigit = (num % divisor) / (divisor / 10);
-                divisor *= 10;
-                digits.Add(newDigit);
+                digits.Add(Convert.ToInt32(value[i].ToString()));
             }
 
             return digits;
@@ -52,13 +46,6 @@ namespace TestRadency.Classes
             }
 
             return sum;
-        }
-        public static int GetNumSize(int num)
-        {
-            string numStr = num.ToString();
-            int size = numStr.Length;           
-
-            return size;
         }
         public static bool CheckValue(string value)
         {

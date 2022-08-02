@@ -70,7 +70,7 @@ namespace TestRadency.Classes
             for(int i = 0; i < list.Count; i++)
             {
                 str += list[i].Value;
-                str += " ";
+                if(i != list.Count - 1) str += " ";
             }
 
             return str;
